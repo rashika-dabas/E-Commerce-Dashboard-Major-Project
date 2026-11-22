@@ -4,7 +4,7 @@ Using Power BI
 ## Overview
 The attached dataset contains ecommerce orders of a company from multiple countries in 2023. It is a mobile accessories ecommerce company with a global footprint. The company is headquartered in Bangalore in India. The supply chain of the company is very strong: customers are located in 14 countries and they receive orders within a week.
 
-There are various ways in which a customer can order. An order can be placed using the company’s app, its website, using Whatsapp and also via other sources (for example: dialing in the 24*7 support helpline number). Customers are divided into 5 categories: A, B, C, D, E.
+There are various ways in which a customer can order. An order can be placed using the company’s app, its website, using WhatsApp and also via other sources (for example: dialing in the 24*7 support helpline number). Customers are divided into 5 categories: A, B, C, D, E.
 
 The sales team in the company is structured into 5 teams: Alpha, Beta, Gamma, Delta and Epsilon. Every team has multiple Sales Managers and a few Sales POCs, typically 3-4. Every sales POC is given individual targets and the sum of the targets of the sales POCs is the target of the Sales Manager.
 
