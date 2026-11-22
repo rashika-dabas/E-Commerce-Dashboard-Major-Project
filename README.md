@@ -20,28 +20,28 @@ Note that Sales POCs are not limited to any customer or country. This means that
 As an analyst, your goal is to help the company derive insights from the data. These insights will help the company take decisions w.r.t. Orders. Eventually it will help the company increase the number of orders, value of orders and hence revenue. Your manager asks you to perform the following operations and get answers to key questions.
 1. Import all the tables in Power BI Desktop.
 2. At the start of the new financial year, there was a bug in the system which led to inadequate capturing of the Sales Channel.
-   a.  Identify the first and last timestamps when we weren't capturing this data.
-   b.  Handle these missing values appropriately.
-   c.  Why did you use the above approach for imputing the missing values?
+* Identify the first and last timestamps when we weren't capturing this data.
+* Handle these missing values appropriately.
+* Why did you use the above approach for imputing the missing values?
 3. Combine the first name and last name to create a Sales Manager Column in Power Query.
 4. Create a Data Model with the three tables.
 5. We want to understand the Sales Targets and their completion rates.
-  a.  Define three buckets: Target not met, Target Met, Exceeded Target for Sales POCs and plot the three categories on an appropriate chart to see the counts.
-  b.  Which Sales Teams were given how much total sales targets in total. Plot on a chart to see the comparison. Which sales manager was given the highest target? Did he/she meet that target?
-  c.  On average, how much short were actual sales from targets for the Sales POCs who did not complete them.
-  d.  Plot the % target reached per Sales Manager in each team.
+* Define three buckets: Target not met, Target Met, Exceeded Target for Sales POCs and plot the three categories on an appropriate chart to see the counts.
+* Which Sales Teams were given how much total sales targets in total. Plot on a chart to see the comparison. Which sales manager was given the highest target? Did he/she meet that target?
+* On average, how much short were actual sales from targets for the Sales POCs who did not complete them.
+* Plot the % target reached per Sales Manager in each team.
 6.  In each country, display which Sales Managers have been most successful.
-  a.  in terms of sales value
-  b.  in terms of number of orders and customers
+* in terms of sales value
+* in terms of number of orders and customers
 7. We want to understand the order patterns to forecast demand better. Create an Orders trend (number of orders as well as value) across months. This will allow us to gauge which months were best for the company from a sales standpoint.
 8. We want to understand which country fared how well in terms of number of orders and average order value. Plot both values by country on a map.
 9. In each category and gender of customers, what % of customers did not place an order.
 10. Which order source proved to be most used by customers across various countries? Plot an appropriate chart to demonstrate the same.
-11.	The category of customers stores a lot of hidden insights. Which Category of customers:
-  a.  Has most Indian males
-  b.	Is the youngest on average
-  c.	Has the highest sales
-  d.	Has the greatest number of Sales POCs in the Delta team
+11. The category of customers stores a lot of hidden insights. Which Category of customers:
+* Has most Indian males
+* Is the youngest on average
+* Has the highest sales
+* Has the greatest number of Sales POCs in the Delta team
 Show all this data using Appropriate Charts.
 12.	Create a ‘Sales Targets’ page. Create a KPI chart w.r.t actual sales and target sales. The page must include Sales POC, Sales Manager and Sales Team slicers.
 13.	Add a Q&A for increasing interactivity of the report.
