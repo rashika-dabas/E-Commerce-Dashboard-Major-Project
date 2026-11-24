@@ -73,7 +73,9 @@ IF(
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkPCUtgW-Rb_artTzuWD0zKFiNPcCR-Ld-k4sxl9dd-Q&s=10",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLp1xkO62guS08MPCZ4-glreKOSr0Zwss32BDQwHIEA&s=10"
 )
+
 In Table View, select data type as Text and Data Category as Image URL.
+
 * %_Customers_Didn't_Order = 
 VAR TotalCustomers = 
   COUNTROWS(Customers)
@@ -95,12 +97,15 @@ Create these 3 new columns.
 'Sales Targets'[Sales_By_POC]<'Sales Targets'[2023 Sales Target], "Target Not Met",
 'Sales Targets'[Sales_By_POC]='Sales Targets'[2023 Sales Target], "Target Met",
 'Sales Targets'[Sales_By_POC]>'Sales Targets'[2023 Sales Target], "Exceeded Target"
+
 )
 Also, create these 2 measures.
+
 * Target Achievement % = DIVIDE(SUM(Orders[Order Value]),SUM('Sales Targets'[2023 Sales Target])) * 100
 * Average Shortfall = averagex(filter('Sales Targets','Sales Targets'[Target_Bucket]="Target not met"),'Sales Targets'[2023 Sales Target]-'Sales Targets'[Sales_By_POC])
 
 Create a new table as follows:
+
 Sales_Manager_Target_Completion = 
 SUMMARIZE('Sales Targets','Sales Targets'[Sales Manager], 
 "Total Sales", SUM('Sales Targets'[Sales_By_POC]), 
