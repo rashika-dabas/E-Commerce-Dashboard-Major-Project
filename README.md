@@ -88,7 +88,7 @@ VAR CustomerDidNotOrder =
 RETURN
   DIVIDE(CustomerDidNotOrder, TotalCustomers,0)
 
-In Sales targets table,
+In Sales Targets table,
 
 Create these 3 new columns.
 * Sales_By_POC = CALCULATE(SUM(Orders[Order Value]),FILTER(Orders, 'Sales Targets'[Sales POC]=Orders[Sales POC]))
