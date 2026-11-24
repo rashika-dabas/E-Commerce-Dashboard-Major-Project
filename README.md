@@ -59,8 +59,8 @@ Show all this data using Appropriate Charts.
 2.	We deleted unwanted blank rows in the dataset sheet of Orders.
 3.	Order Datetime was sorted in ascending order. First and last time stamp was 12:44 AM and 11:34 PM respectively.
 4.	Then we saw how many missing values we have in Order Source column by applying filter to that.
-5.	We then replaced all null values to Website. Because null values were 1%, so we used mode to replace null values.
-6.	Then from transform tab, we applied merge column feature for combining first and last name of the sales manager and also removed these separated columns from the dataset.
+5.	We then replaced all null values to Website. Since null values were 1%, we used mode to replace null values.
+6.	Then from transform tab, we applied merge column feature for combining first and last name of the sales manager and also remove these separated columns from the dataset.
 
 ### Data Analysis Expressions (DAX)
 
