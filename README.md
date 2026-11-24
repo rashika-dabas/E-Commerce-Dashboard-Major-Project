@@ -12,7 +12,7 @@ The sales team in the company is structured into 5 teams: Alpha, Beta, Gamma, De
 There are 3 tables within the Excel file: Orders, Customers and Sales Targets.
 1. Orders: It contains data corresponding to orders in 14 countries. The Order ID is unique for every order. One customer can place more than one order. The Order Datetime specifies the timestamp (GMT) when the order was placed. The Order Source specifies the source of the order: App, Website, WhatsApp or Other. Every order has a Sales POC associated with it. The Order Value is in rupees.
 2. Customers: The Customer ID is a unique ID for each customer. The age, gender, country and category which the customer is classified into is given in this table.
-3. Sales Targets: This table contains the Sales POC → Sales Manager mapping as well as the Sales Team of every Sales POC (Point of Contact) and hence Sales Manager. It also contains the targets that each Sales POC has been given.
+3. Sales Targets: This table contains the Sales POC to Sales Manager mapping as well as the Sales Team of every Sales POC (Point of Contact). It also contains the targets that each Sales POC has been given.
 
 Note that Sales POCs are not limited to any customer or country. This means that a Sales POC can be responsible for orders placed by Customer A in Country X as well as for orders placed by Customer B in Country Y.
 
