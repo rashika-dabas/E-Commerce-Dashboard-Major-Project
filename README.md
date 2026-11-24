@@ -87,6 +87,7 @@ RETURN
   DIVIDE(CustomerDidNotOrder, TotalCustomers,0)
 
 In Sales targets table,
+
 Create these 3 new columns.
 * Sales_By_POC = CALCULATE(SUM(Orders[Order Value]),FILTER(Orders, 'Sales Targets'[Sales POC]=Orders[Sales POC]))
 * Sales_Difference = 'Sales Targets'[Sales_By_POC] - 'Sales Targets'[2023 Sales Target]
@@ -95,6 +96,7 @@ Create these 3 new columns.
 'Sales Targets'[Sales_By_POC]='Sales Targets'[2023 Sales Target], "Target Met",
 'Sales Targets'[Sales_By_POC]>'Sales Targets'[2023 Sales Target], "Exceeded Target"
 )
+Also, create these 2 measures.
 * Target Achievement % = DIVIDE(SUM(Orders[Order Value]),SUM('Sales Targets'[2023 Sales Target])) * 100
 * Average Shortfall = averagex(filter('Sales Targets','Sales Targets'[Target_Bucket]="Target not met"),'Sales Targets'[2023 Sales Target]-'Sales Targets'[Sales_By_POC])
 
