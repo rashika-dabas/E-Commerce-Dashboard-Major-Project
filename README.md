@@ -64,12 +64,16 @@ Show all this data using Appropriate Charts.
 
 ### Data Analysis Expressions (DAX)
 
-* Eye Icon = " 👁 ":
-if[Gender] = "M" then "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkPCUtgW-Rb_artTzuWD0zKFiNPcCR-Ld-k4sxl9dd-Q&s=10"
-else if[Gender] = "F"
-then "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLp1xkO62guS08MPCZ4-glreKOSr0Zwss32BDQwHIEA&s=10"
-else "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLp1xkO62guS08MPCZ4-glreKOSr0Zwss32BDQwHIEA&s=10")
-
+In Customers,
+* Eye Icon = " 👁 "
+* Create a new column as follows:
+Gender Image =
+IF(
+    'Customers'[Gender] = "M",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkPCUtgW-Rb_artTzuWD0zKFiNPcCR-Ld-k4sxl9dd-Q&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhLp1xkO62guS08MPCZ4-glreKOSr0Zwss32BDQwHIEA&s=10"
+)
+In Table View, select data type as Text and Data Category as Image URL.
 * %_Customers_Didn't_Order = 
 VAR TotalCustomers = 
   COUNTROWS(Customers)
@@ -82,21 +86,20 @@ VAR CustomerDidNotOrder =
 RETURN
   DIVIDE(CustomerDidNotOrder, TotalCustomers,0)
 
-* Average Shortfall = averagex(filter('Sales Targets','Sales Targets'[Target_Bucket]="Target not met"),'Sales Targets'[2023 Sales Target]-'Sales Targets'[Sales_By_POC])
-
+In Sales targets table,
+Create these 3 new columns.
 * Sales_By_POC = CALCULATE(SUM(Orders[Order Value]),FILTER(Orders, 'Sales Targets'[Sales POC]=Orders[Sales POC]))
-
 * Sales_Difference = 'Sales Targets'[Sales_By_POC] - 'Sales Targets'[2023 Sales Target]
-
-* Target Achievement % = DIVIDE(SUM(Orders[Order Value]),SUM('Sales Targets'[2023 Sales Target]))
-
 * Target_Bucket = SWITCH(True(),
 'Sales Targets'[Sales_By_POC]<'Sales Targets'[2023 Sales Target], "Target Not Met",
 'Sales Targets'[Sales_By_POC]='Sales Targets'[2023 Sales Target], "Target Met",
 'Sales Targets'[Sales_By_POC]>'Sales Targets'[2023 Sales Target], "Exceeded Target"
 )
+* Target Achievement % = DIVIDE(SUM(Orders[Order Value]),SUM('Sales Targets'[2023 Sales Target])) * 100
+* Average Shortfall = averagex(filter('Sales Targets','Sales Targets'[Target_Bucket]="Target not met"),'Sales Targets'[2023 Sales Target]-'Sales Targets'[Sales_By_POC])
 
-* Sales_Manager_Target_Completion = 
+Create a new table as follows:
+Sales_Manager_Target_Completion = 
 SUMMARIZE('Sales Targets','Sales Targets'[Sales Manager], 
 "Total Sales", SUM('Sales Targets'[Sales_By_POC]), 
 "Total Target", SUM('Sales Targets'[2023 Sales Target]), 
