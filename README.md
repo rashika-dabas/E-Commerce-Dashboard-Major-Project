@@ -97,8 +97,8 @@ Create these 3 new columns.
 'Sales Targets'[Sales_By_POC]<'Sales Targets'[2023 Sales Target], "Target Not Met",
 'Sales Targets'[Sales_By_POC]='Sales Targets'[2023 Sales Target], "Target Met",
 'Sales Targets'[Sales_By_POC]>'Sales Targets'[2023 Sales Target], "Exceeded Target"
-
 )
+
 Also, create these 2 measures.
 
 * Target Achievement % = DIVIDE(SUM(Orders[Order Value]),SUM('Sales Targets'[2023 Sales Target])) * 100
