@@ -56,11 +56,11 @@ Show all this data using Appropriate Charts.
 ## Solution Approach
 ### Data Cleaning & Transformation (Power Query)
 1.  Handle datatype inconsistencies in all tables.
-2.	We deleted the unwanted blank rows in the dataset sheet of orders.
+2.	We deleted unwanted blank rows in the dataset sheet of Orders.
 3.	Order Datetime was sorted in ascending order. First and last time stamp was 12:44 AM and 11:34 PM respectively.
-4.	Then we saw how many missing values we have in order source column by applying filter to that.
-5.	We then replaced all null values to website because null values was less than 1% so we use mode to replace null values.
-6.	Then from transform tab, we applied merge column feature for combining names of the sales manager, this also removes the previous separated columns from the dataset.
+4.	Then we saw how many missing values we have in Order Source column by applying filter to that.
+5.	We then replaced all null values to Website. Because null values were 1%, so we used mode to replace null values.
+6.	Then from transform tab, we applied merge column feature for combining first and last name of the sales manager and also removed these separated columns from the dataset.
 
 ### Data Analysis Expressions (DAX)
 
