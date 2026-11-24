@@ -20,8 +20,8 @@ Note that Sales POCs are not limited to any customer or country. This means that
 As an analyst, your goal is to help the company derive insights from the data. These insights will help the company take decisions w.r.t. Orders. Eventually it will help the company increase the number of orders, value of orders and hence revenue. Your manager asks you to perform the following operations and get answers to key questions.
 1. Import all the tables in Power BI Desktop.
 2. At the start of the new financial year, there was a bug in the system which led to inadequate capturing of the Sales Channel.
-* Identify the first and last timestamps when we weren't capturing this data.
-* Handle these missing values appropriately.
+* Identify the first and last timestamps when we were capturing this data.
+* Handle missing values appropriately.
 * Why did you use the above approach for imputing the missing values?
 3. Combine the first name and last name to create a Sales Manager Column in Power Query.
 4. Create a Data Model with the three tables.
@@ -55,11 +55,12 @@ Show all this data using Appropriate Charts.
 
 ## Solution Approach
 ### Data Cleaning & Transformation (Power Query)
-1.	We deleted the unwanted blank rows in the dataset sheet of orders.
-2.	Then we saw how many missing values we have in order source column by applying filter to that.
-3.	Order Datetime was sorted in ascending order and found first and last time stamp and that is 12:49 AM – 11:57 PM
-4.	We then replaced all null values to website because null values was less than 1% so we use mode to replace null values.
-5.	Then from transform tab, we applied merge column feature for combining names of the sales manager, this also removes the previous separated columns from the dataset.
+1.  Handle datatype inconsistencies in all tables.
+2.	We deleted the unwanted blank rows in the dataset sheet of orders.
+3.	Order Datetime was sorted in ascending order and found first and last time stamp and that is 12:49 AM – 11:57 PM.
+4.	Then we saw how many missing values we have in order source column by applying filter to that.
+5.	We then replaced all null values to website because null values was less than 1% so we use mode to replace null values.
+6.	Then from transform tab, we applied merge column feature for combining names of the sales manager, this also removes the previous separated columns from the dataset.
 
 ### Data Analysis Expressions (DAX)
 
