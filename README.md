@@ -114,8 +114,8 @@ SUMMARIZE('Sales Targets','Sales Targets'[Sales Manager],
 
 ### Dashboard Creation
 1. Data Model: In Model View, tables were already connected in Power BI as follows: Sales Target to Orders Table via one to many relationship and Customers to Orders Table via one to many relationship because one sales manager can have multiple orders and one customer can place multiple orders.
-2. We created Sales by POC column by using calculate function to sum up the orders value wherein sales POC was matched in order table and sales target table by using filter function. (DAX)
-3. Then we created a bucket column for target not met, target met and exceeded target by using switch statement as there were multiple conditions to state true by comparing Sales By POC to Sales Target value.
+2. In Sales Target table, we created Sales by POC column by using calculate function to sum up the orders value wherein sales POC was matched in Sales Target and Orders table by using filter function. (DAX)
+3. Then, in Sales Target table, we created a bucket column for target not met, target met and exceeded target by using switch statement as there were multiple conditions to state true by comparing Sales By POC to Sales Target value. (DAX)
 4. Plotted a pie chart to visualize the target bucket with count of values which concludes that there are not any targets that met, targets were not met with a count of 37(40.22%) or the targets were exceeded with a count of 55(59.78%).
 5. Plotted a column chart to visualize the total sales of each sales team and this concludes that Alpha team has the highest sales of 3.7M.
 6. Sales Manager Target Completion table was created with columns as Sales Manager, Total Sales (sum of sales by POC), Total Target (sum of sales target), % Target Completion ([total sales/total target]*100)
